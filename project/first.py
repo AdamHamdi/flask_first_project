@@ -1,7 +1,8 @@
 from flask import Flask, render_template,url_for
 
-app = Flask(__name__)
 
+app = Flask(__name__)
+app.config['SECRET_Key']='5a921e1a22298afd89aec51bc29ea688'
 posts=[
     {
         'author':'Corey Schfer',
@@ -14,7 +15,13 @@ posts=[
         'title':'Blog post 2',
         'content':'Second post content',
         'date_posted':'June 14,2020'
-    }
+    },
+    {
+        'author':'Gbby Daniel',
+        'title':'Blog post 1',
+        'content':'first post content',
+        'date_posted':'April 20,2019'
+    },
     ]
 
 @app.route("/")
